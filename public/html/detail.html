@@ -1,0 +1,20 @@
+<div class="container">
+
+  <h4>Name: {{user.name}}</h4>
+  <h4>Friends:</h4>
+  <ul>
+    <li ng-repeat='friend in user.friends' ng-dblclick='removeFriend(friend)'>
+      {{friend.name}}
+    </li>
+  </ul>
+  
+  <h4>Potential:</h4>
+  <form ng-submit=addFriend()>
+    <select ng-model='selectedFriend' required>
+      <option value="{{friend}}" ng-repeat='friend in potential'>{{friend.name}}</option>
+    </select>
+    <button>Add Friend</button>   
+  </form>
+
+
+</div>

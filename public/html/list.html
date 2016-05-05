@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>USER LIST</h1>
+  
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <table class="table table-hover">
+        <tbody>
+          <tr ng-repeat='user in users track by $index'>
+            <td ui-sref='detail({userId: user._id})'>
+              {{user.name}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+</div>
+
